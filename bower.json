@@ -1,0 +1,24 @@
+{
+  "name": "cans-for-coats",
+  "description": "Cans for Coats organization website. U of M/ Ann Arbor.",
+  "main": "index.js",
+  "authors": [
+    "Stanley Rokita"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Cans",
+    "for",
+    "Coats",
+    "charity"
+  ],
+  "homepage": "cansforcoats.org",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
