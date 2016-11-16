@@ -1,0 +1,26 @@
+{
+  "name": "cans-for-coats",
+  "version": "1.0.0",
+  "description": "Cans for Coats organization website. U of M/ Ann Arbor.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Srokit/cans-for-coats.git"
+  },
+  "keywords": [
+    "Cans",
+    "for",
+    "Coats",
+    "charity"
+  ],
+  "author": "Stanley Rokita",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Srokit/cans-for-coats/issues"
+  },
+  "homepage": "https://github.com/Srokit/cans-for-coats#readme"
+}
