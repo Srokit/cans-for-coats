@@ -5,16 +5,20 @@
     <!--Third Party Scripts-->
     <script src="bower/jquery/dist/jquery.min.js"></script>
     <script src="bower/angular/angular.min.js"></script>
+    <script src="bower/angular-route/angular-route.min.js"></script>
     <script src="bower/bootstrap/dist/js/bootstrap.min.js"></script>
     <link href="bower/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
 
     <!--My Angular App-->
     <script src="app/app.module.js"></script>
     <script src="app/app.config.js"></script>
+
+        <!--Teams Component-->
+        <script src="app/teams/teams.component.js"></script>
 </head>
-<body>
+<body ng-app="app">
     <div class="container">
-        <ng-view>Loading Angular...</view>
+        <ng-view></ng-view>
     </div>
 </body>
 </html>

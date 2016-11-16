@@ -1,10 +1,13 @@
 angular.module('app').config(function($routeProvider) {
 
     $routeProvider
-    .when('', {
+    .when('/', {
         template: '<teams></teams>',
     })
-    .when('teams', {
+    .when('/teams', {
         template: '<teams></teams>',
+    })
+    .otherwise({
+        redirectTo: '/'
     })
 });
