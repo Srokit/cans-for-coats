@@ -6,12 +6,12 @@ var config;
 
 if( env.NODE_ENV === "production" ) {
     config = {
-        port: 3000
+        port: env.PORT
     };
 }
 else { // development or test
     config = {
-        port: env.PORT;
+        port: 3000
     };
 }
 
