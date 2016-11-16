@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/Srokit/cans-for-coats/issues"
   },
-  "homepage": "https://github.com/Srokit/cans-for-coats#readme"
+  "homepage": "https://github.com/Srokit/cans-for-coats#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
 }
