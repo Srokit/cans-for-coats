@@ -1,5 +1,6 @@
-<div>
-    <p>
-        Dope
-    </p>
-</div>
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="team in teams">
+        <img ng-src="team.imgSrc"/>
+        <h4>{{team.name}}</h4>
+    </li>
+</ul>
