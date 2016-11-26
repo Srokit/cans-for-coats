@@ -10,6 +10,8 @@ angular.module('app').controller('teamsController', function($scope, teamsServic
         }
         else {
             console.log("got the data");
+
+            $scope.teams = data;
         }
     });
 });
