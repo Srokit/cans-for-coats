@@ -13,7 +13,9 @@ if( env.NODE_ENV === "production" ) {
 else { // development or test
     config = {
         port: 3000,
-        jwtSec: "superSecret"
+        jwtSec: "superSecret",
+        adminEmail: "email@example.com",
+        adminPass: "adminPass"
     };
 }
 

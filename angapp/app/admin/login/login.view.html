@@ -1,8 +1,8 @@
 <h3>Admin Login</h3>
-<form name="adminLogin" novalidate ng-submit="submit()">
+<form novalidate>
     <label for="adminEmail">Email:</label>
-    <input class="form-control" type="email" name="adminEmail" model="adminCreds.email"/>
+    <input class="form-control" type="email" id="adminEmail" ng-model="credentials.email"/>
     <label for="adminPassword">Password:</label>
-    <input class="form-control" type="password" name="adminPassword" model="adminCreds.password"/>
-    <button class="btn btn-default" type="submit">Submit</button>
+    <input class="form-control" type="password" id="adminPassword" ng-model="credentials.password"/>
+    <button class="btn btn-default" ng-click="submit()">Submit</button>
 </form>

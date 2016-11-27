@@ -15,6 +15,7 @@ angular.module('app').service('LoginService', function($http) {
                 cb(true, response.data.adminToken);
             }
             else {
+                console.error("Failure to validate creds.");
                 cb(false, null);
             }
         })

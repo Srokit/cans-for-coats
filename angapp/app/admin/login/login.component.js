@@ -1,10 +1,12 @@
 angular.module('app').controller('LoginController', function($scope, LoginService, AdminService) {
 
-    $scope.adminCreds = {};
+    $scope.credentials = {};
 
     $scope.submit = function() {
 
-        LoginService.post($scope.adminCreds, function(result, adminToken) {
+        console.log($scope.credentials);
+
+        LoginService.post($scope.credentials, function(result, adminToken) {
             if(result) {
                 console.log("Token received: ", adminToken);
                 AdminService.setTok(adminToken);
