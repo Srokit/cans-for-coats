@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/Srokit/cans-for-coats#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "jsonwebtoken": "^7.1.9"
   }
 }

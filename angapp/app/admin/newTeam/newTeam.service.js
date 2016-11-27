@@ -14,11 +14,17 @@ angular.module('app').service('NewTeamService', function($http){
             }
         })
         .then(function(response) {
-            console.log("Successfully posted newTeam", response.data);
-            cb(true); //true for success
+            if(response.data.success) {
+                console.log("Successfully posted newTeam:", response.data);
+                cb(true); //true for success
+            }
+            else {
+                console.error("Error validating admin:", response.data.err);
+                cb(false);
+            }
         })
         .catch(function(err) {
-            console.error("Error posting newTeam", err.data);
+            console.error("Error posting newTeam:", err.data);
             cb(false);
         });
     };
