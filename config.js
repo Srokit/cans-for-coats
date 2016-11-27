@@ -6,12 +6,14 @@ var config;
 
 if( env.NODE_ENV === "production" ) {
     config = {
-        port: env.PORT
+        port: env.PORT,
+        jwtSec: env.JWT_SEC
     };
 }
 else { // development or test
     config = {
-        port: 3000
+        port: 3000,
+        jwtSec: "superSecret"
     };
 }
 
