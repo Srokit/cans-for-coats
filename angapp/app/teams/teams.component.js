@@ -1,8 +1,5 @@
 angular.module('app').controller('teamsController', function($scope, teamsService) {
-    $scope.teams = [{
-        imgSrc: "exTeamProfPic.png",
-        name: "ExampleTeam"
-    }]
+    $scope.teams = [];
 
     teamsService.get(function(err, data) {
         if(err) {

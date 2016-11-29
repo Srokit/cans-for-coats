@@ -2,8 +2,14 @@
 angular.module('app').service('teamsService', function($http) {
     this.get = function(cb) {
         $http.get('/teams').then(function(response) {
-            console.log("Got ", response.data);
-            cb(null, response.data);
+            if(response.data.success) {
+                console.log("Got ", response.data.teams);
+                cb(null, response.data.teams);
+            }
+            else {
+                var err = response.data.err;
+                cb(err, null);
+            }
         })
         .catch(function(err) {
             console.log("Got error: ", err);

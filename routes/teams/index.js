@@ -1,8 +1,19 @@
 var express = require('express');
 var router = express.Router();
 
+var Team = require('../../models/teams');
+
 router.get('/', function(req, res) {
-    res.json([{name: "TeamFromDB"}, {name: "TeamFromDB2"}]);
+    Team.find({}, function(err, teams) {
+        if(!err) {
+            res.json({success: true, teams: teams});
+        }
+        else {
+            res.json({success: false});
+        }
+
+    });
+
 });
 
 module.exports = router;
