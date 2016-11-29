@@ -1,13 +1,12 @@
 angular.module('app').service('NewTeamService', function($http){
 
-    var tempToken = "validAdminToken";
-
-    this.post = function(newTeam, cb) {
+    this.post = function(newTeam, adminToken, cb) {
+        console.log("Using token: ", adminToken);
         $http({
             method: "POST",
             url: "/admin/newTeam",
             headers: {
-                "adminToken": tempToken
+                "adminToken": adminToken
             },
             data: {
                 team: newTeam

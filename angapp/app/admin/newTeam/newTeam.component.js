@@ -1,9 +1,10 @@
-angular.module('app').controller('NewTeamController', function($scope, NewTeamService) {
+angular.module('app').controller('NewTeamController', function($scope, NewTeamService, AdminService) {
 
     $scope.team = {};
 
     $scope.submit = function() {
-        NewTeamService.post($scope.team, function(result) {
+        var adminToken = AdminService.getTok();
+        NewTeamService.post($scope.team, adminToken, function(result) {
 
         });
     }
