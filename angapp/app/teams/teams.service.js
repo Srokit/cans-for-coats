@@ -41,5 +41,33 @@ angular.module('app').service('TeamsService', function($http, AdminService) {
         .catch(function(err) {
             cb(false);
         })
-    }
+    };
+
+    this.addDonation = function(team, donationAmount, cb) {
+
+        var adminToken = AdminService.getTok();
+        $http({
+            method: "PATCH",
+            url: "admin/teams/"+team._id,
+            headers: {
+                "admintoken": adminToken
+            },
+            data: {
+                donationAmount: donationAmount
+            }
+        })
+        .then(function(response) {
+            var data = response.data;
+            if(data.success) {
+                cb(true);
+            }
+            else {
+                console.error(data.err);
+                cb(false);
+            }
+        })
+        .catch(function(err) {
+
+        });
+    };
 });
