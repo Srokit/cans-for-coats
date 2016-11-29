@@ -7,7 +7,8 @@ var config;
 if( env.NODE_ENV === "production" ) {
     config = {
         port: env.PORT,
-        jwtSec: env.JWT_SEC
+        jwtSec: env.JWT_SEC,
+        dbUrl: env.MONGODB_URI
     };
 }
 else { // development or test
@@ -15,7 +16,8 @@ else { // development or test
         port: 3000,
         jwtSec: "superSecret",
         adminEmail: "email@example.com",
-        adminPass: "adminPass"
+        adminPass: "adminPass",
+        dbUrl: "mongodb://localhost/cfc"
     };
 }
 

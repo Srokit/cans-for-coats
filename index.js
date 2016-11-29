@@ -8,7 +8,7 @@ var app = express();
 
 var config = require('./config');
 
-mong.connect("mongodb://localhost/cfc");
+mong.connect(config.dbUrl);
 
 mong.connection.on('open', function() {
     console.log("Connected to mongo db.");
