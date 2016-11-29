@@ -5,7 +5,7 @@ angular.module('app').controller('NewTeamController', function($scope, NewTeamSe
     $scope.submit = function() {
         var adminToken = AdminService.getTok();
         NewTeamService.post($scope.team, adminToken, function(result) {
-
+        
         });
     }
 });

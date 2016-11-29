@@ -7,7 +7,9 @@ var router = express.Router();
 // Middleware to determine if user has access to further admin routes
 router.use(function(req, res, next) {
 
-    var adminToken = req.headers.adminToken;
+    var adminToken = req.headers['admintoken'];
+    console.log(req.headers);
+    console.log(adminToken);
 
     isAdminTokenValid(adminToken, function(result) {
         if(result) {
