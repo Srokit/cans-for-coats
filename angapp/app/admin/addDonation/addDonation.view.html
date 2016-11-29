@@ -3,7 +3,8 @@
     <li class="list-group-item" ng-repeat="team in teams">
         <img ng-src="team.imgSrc" />
         <h4 class="teamName">{{team.name}}</h4>
-        <button class="btn btn-danger pull-right removeTeamButt" ng-click="addDonation(team)">&plus;</button>
+        <h3>Dollars Donated: {{team.dollarsDonated | currency}}</h3>
+        <button class="btn btn-info pull-right removeTeamButt" ng-click="addDonation(team)">&plus;</button>
     </li>
 </ul>
 <input type="number" step="0.01" ng-model="donation"/>
