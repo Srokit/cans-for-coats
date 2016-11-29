@@ -24,6 +24,7 @@ router.use(function(req, res, next) {
 });
 
 router.use('/newTeam', require('./newTeam'));
+router.use('/teams', require('./teams'));
 
 module.exports = router;
 

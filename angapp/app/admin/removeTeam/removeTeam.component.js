@@ -5,7 +5,7 @@ angular.module('app').controller('RemoveTeamController', function($scope, TeamsS
         TeamsService.remove(team, function(result) {
             if(result) {
                 // Remove team from local list
-                $scope.teams.splice($scope.teams.indexof(team), 1);
+                $scope.teams.splice($scope.teams.indexOf(team), 1);
             }
             else {
                 console.error("Error removing team :(");
