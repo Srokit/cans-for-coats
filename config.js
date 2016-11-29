@@ -8,6 +8,8 @@ if( env.NODE_ENV === "production" ) {
     config = {
         port: env.PORT,
         jwtSec: env.JWT_SEC,
+        adminEmail: env.ADMIN_EMAIL,
+        adminPass: env.ADMIN_PASS,
         dbUrl: env.MONGODB_URI
     };
 }
