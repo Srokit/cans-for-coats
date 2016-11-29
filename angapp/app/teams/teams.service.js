@@ -1,5 +1,5 @@
 // The HTTP service that will get and post our teams data from the backend
-angular.module('app').service('TeamsService', function($http) {
+angular.module('app').service('TeamsService', function($http, AdminService) {
     this.get = function(cb) {
         $http.get('/teams').then(function(response) {
             if(response.data.success) {
@@ -15,5 +15,30 @@ angular.module('app').service('TeamsService', function($http) {
             console.log("Got error: ", err);
             cb(err, null);
         });
+    };
+
+    this.remove = function(team, cb) {
+
+        var adminToken = AdminService.getTok();
+        $http({
+            method: "DELETE",
+            url: "admin/teams/"+team._id,
+            headers: {
+                "admintoken": adminToken
+            }
+        })
+        .then(function(response) {
+            var data = response.data;
+
+            if(data.success) {
+                cb(true);
+            }
+            else {
+                cb(false);
+            }
+        })
+        .catch(function(err) {
+            cb(false);
+        })
     }
 });

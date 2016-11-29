@@ -3,6 +3,6 @@
     <li class="list-group-item" ng-repeat="team in teams">
         <img ng-src="team.imgSrc" />
         <h4 class="teamName">{{team.name}}</h4>
-        <button class="btn btn-danger pull-right removeTeamButt">&times;</button>
+        <button class="btn btn-danger pull-right removeTeamButt" ng-click="remove(team)">&times;</button>
     </li>
 </ul>
