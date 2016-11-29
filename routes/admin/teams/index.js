@@ -26,4 +26,21 @@ router.delete('/:teamId', function(req, res) {
     });
 });
 
+// Sending a patch request to this route indicates that we want to
+// add a donation to this team
+router.patch('/:teamId', function(req, res) {
+
+    var teamId = req.params.teamId;
+
+    var donationAmount = req.body.donationAmount;
+
+    Team.findById(teamId, function(err, team) {
+
+        team.dollarsDonated += donationAmount;
+        team.save(function(err) {
+            res.json({success: true});
+        });
+    });
+});
+
 module.exports = router;
