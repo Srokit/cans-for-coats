@@ -1,0 +1,8 @@
+<h3>Remove a Team</h3>
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="team in teams">
+        <img ng-src="team.imgSrc" />
+        <h4 class="teamName">{{team.name}}</h4>
+        <button class="btn btn-danger pull-right removeTeamButt">&times;</button>
+    </li>
+</ul>

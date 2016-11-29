@@ -1,7 +1,7 @@
-angular.module('app').controller('teamsController', function($scope, teamsService) {
+angular.module('app').controller('teamsController', function($scope, TeamsService) {
     $scope.teams = [];
 
-    teamsService.get(function(err, data) {
+    TeamsService.get(function(err, data) {
         if(err) {
             console.log("got the err");
         }

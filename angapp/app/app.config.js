@@ -16,6 +16,9 @@ angular.module('app').config(function($routeProvider) {
     .when('/admin/newteam', {
         template: '<new-team></new-team>'
     })
+    .when('/admin/removeteam', {
+        template: '<remove-team></remove-team>'
+    })
     .otherwise({
         redirectTo: '/'
     })
