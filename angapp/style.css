@@ -2,3 +2,7 @@
     display: inline !important;
     margin-bottom: 50px;
 }
+
+.bottomLink {
+    display: block !important;
+}
