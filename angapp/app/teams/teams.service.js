@@ -34,6 +34,7 @@ angular.module('app').service('TeamsService', function($http, AdminService) {
                 cb(true);
             }
             else {
+                console.error("From node:", data.err);
                 cb(false);
             }
         })
