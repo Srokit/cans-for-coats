@@ -7,6 +7,9 @@ angular.module('app').config(function($routeProvider) {
     .when('/teams', {
         template: '<teams></teams>'
     })
+    .when('/admin', {
+        template: '<admin></admin>'
+    })
     .when('/admin/login', {
         template: '<admin-login></admin-login>'
     })
